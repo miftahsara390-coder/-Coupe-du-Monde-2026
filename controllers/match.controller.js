@@ -1,6 +1,5 @@
-const { Match, Affectation, Arbitre } = require("../models");
+const { Match, Affectation, Arbitre } = require("../model");
 
-// ✅ CREATE MATCH
 exports.createMatch = async (req, res) => {
   try {
     const data = await Match.create(req.body);
@@ -10,7 +9,6 @@ exports.createMatch = async (req, res) => {
   }
 };
 
-// ✅ GET ARBITRES DYAL MATCH
 exports.getMatchArbitres = async (req, res) => {
   try {
     const { id } = req.params;

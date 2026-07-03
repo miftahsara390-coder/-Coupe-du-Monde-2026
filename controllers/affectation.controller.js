@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../model");
 
 exports.createAffectation = async (req, res) => {
   try {

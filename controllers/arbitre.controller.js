@@ -1,5 +1,4 @@
-const { Arbitre, Affectation, Match } = require("../models");
-
+const { Arbitre, Affectation, Match } = require("../model");
 
 exports.createArbitre = async (req, res) => {
   try {
@@ -10,12 +9,10 @@ exports.createArbitre = async (req, res) => {
   }
 };
 
-
 exports.getArbitres = async (req, res) => {
   const data = await Arbitre.findAll();
   res.json(data);
 };
-
 
 exports.deleteArbitre = async (req, res) => {
   try {
@@ -34,7 +31,6 @@ exports.deleteArbitre = async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 };
-
 
 exports.getArbitreByIdWithMatchs = async (req, res) => {
   try {
