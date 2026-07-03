@@ -61,12 +61,12 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     {
-      tableName: "arbitres", 
-      timestamps: true, 
+      tableName: "arbitres",
+      timestamps: true,
     }
   );
 
- 
+
   Arbitre.associate = (models) => {
     Arbitre.hasMany(models.Affectation, {
       foreignKey: "arbitreId",
