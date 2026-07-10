@@ -1,0 +1,20 @@
+classDiagram
+    class Affectation {
+        +Integer id
+        +Enum role
+        +Integer arbitreId
+        +Integer matchId
+        +DateTime createdAt
+        +DateTime updatedAt
+    }
+
+    class Arbitre {
+        <<Model>>
+    }
+
+    class Match {
+        <<Model>>
+    }
+
+    Affectation "*" --> "1" Arbitre : belongsTo
+    Affectation "*" --> "1" Match : belongsTo
